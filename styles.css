@@ -1,0 +1,253 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+}
+
+.nav-head {
+    font-size: 40px;
+    color: red;
+
+}
+
+.nav-items {
+    list-style-type: none;
+    display: flex;
+}
+
+
+.nav-items .as {
+    color: rgb(100, 244, 100);
+}
+
+.nav-items li {
+    margin-right: 30px;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Home section styles */
+.home {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+
+}
+
+
+.hh {
+    color: greenyellow;
+}
+
+.home-head {
+    font-size: 56px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+.home-para {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #fff;
+    line-height: 25px;
+}
+
+.home-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Second section styles */
+.second {
+    padding: 50px 20px;
+}
+
+.second-head {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.second-para {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Box styles */
+.box {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.one {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.one::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 345px;
+    height: 2px;
+    background-color: #333;
+}
+
+.two {
+    margin-bottom: 20px;
+}
+
+
+.two-head {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Add styles for toggle button */
+.toggle-button {
+    display: none;
+    /* Hide toggle button by default */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Responsive styles for navigation */
+@media (max-width: 768px) {
+    .nav-items {
+        display: none;
+        /* Hide nav-items by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        text-align: center;
+    }
+
+    .nav-items li {
+        margin-bottom: 10px;
+    }
+
+    .toggle-button {
+        display: block;
+        /* Show toggle button on small screens */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-active .nav-items {
+        display: flex;
+        /* Show nav-items when nav-active class is present */
+    }
+}
+
+
+.footer {
+    max-width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background-color: black;
+    color: #fff;
+
+}
+
+
+.footer p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-head {
+    font-size: 28px;
+}
+
+
+hr {
+    width: 1000px;
+    margin: auto;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1024px) {
+    .box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+    }
+}
